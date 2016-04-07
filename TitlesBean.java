@@ -87,14 +87,14 @@ public class TitlesBean implements Serializable {
 		return path;
 	}
 
-	// close statements and terminate database connection
+
 	protected void finalize() {
-		// attempt to close database connection
+	
 		try {
 			connection.close();
 		}
 
-		// process SQLException on close operation
+	
 		catch (SQLException sqlException) {
 			sqlException.printStackTrace();
 		}
