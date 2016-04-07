@@ -1,7 +1,4 @@
-// BookServlet.java
-// Servlet to return one book's information to the client.
-// The servlet produces XML which is transformed with XSL to
-// produce the client XHTML page.
+
 package org.me.webapps.bookstore;
 
 // Java core packages
@@ -20,8 +17,7 @@ public class BookServlet extends HttpServlet {
             throws ServletException, IOException {
         HttpSession session = request.getSession( false );
         
-        // RequestDispatcher to forward client to bookstore home
-        // page if no session exists or no books are selected
+        
         RequestDispatcher dispatcher =
                 request.getRequestDispatcher( "/index.html" );
         
