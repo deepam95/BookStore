@@ -2,7 +2,7 @@
 // Servlet to add a book to the shopping cart.
 package org.me.webapps.bookstore;
 
-// Java core packages
+
 import java.io.*;
 import java.util.*;
 
@@ -20,7 +20,7 @@ public class AddToCartServlet extends HttpServlet {
       HttpSession session = request.getSession( false );
       RequestDispatcher dispatcher;
       
-      // if session does not exist, forward to index.html
+     
       if ( session == null ) {
          dispatcher = 
             request.getRequestDispatcher( "/index.html" );
@@ -45,8 +45,7 @@ public class AddToCartServlet extends HttpServlet {
       CartItemBean cartItem = 
          ( CartItemBean ) cart.get( book.getISBN() );
       
-      // If book is already in cart, update its quantity.
-      // Otherwise, create an entry in the cart.
+      
       if ( cartItem != null ) 
          cartItem.setQuantity( cartItem.getQuantity() + 1 );
       else 
