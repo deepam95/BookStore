@@ -1,5 +1,4 @@
-// BookBean.java
-// A BookBean object contains the data for one book.
+
 package org.me.webapps.bookstore;
 
 import java.io.*;
@@ -9,8 +8,7 @@ public class BookBean implements Serializable {
    private String ISBN, title, copyright, imageFile;
    private int editionNumber, publisherID;
    private double price;
-   
-   // set ISBN number
+
    public void setISBN( String isbn )
    {
       ISBN = isbn;
@@ -46,7 +44,6 @@ public class BookBean implements Serializable {
       return copyright;
    }
    
-   // set file name of image representing product cover
    public void setImageFile( String fileName )
    {
       imageFile = fileName;
