@@ -1,9 +1,6 @@
-// TitlesBean.java
-// Class TitlesBean makes a database connection and retrieves
-// the books from the database.
+
 package org.me.webapps.bookstore;
 
-// Java core packages
 import java.io.*;
 import java.sql.*;
 import java.util.*;
@@ -14,9 +11,9 @@ public class TitlesBean implements Serializable {
 	private Connection connection;
 	private PreparedStatement titlesQuery;
 
-	// construct TitlesBean object
+
 	public TitlesBean() {
-		// attempt database connection and setup SQL statements
+	
 		try {
 			URL myUrl = getClass().getResource("TitlesBean.class");
 
@@ -31,12 +28,12 @@ public class TitlesBean implements Serializable {
 							+ "FROM titles ORDER BY title");
 		}
 
-		// process exceptions during database setup
+	
 		catch (SQLException sqlException) {
 			sqlException.printStackTrace();
 		}
 
-		// process problems locating data source
+	
 		catch (Exception exception) {
 			exception.printStackTrace();
 		}
